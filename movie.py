@@ -1,6 +1,6 @@
 ######################################################################################
 # Hybrid Movie Recommendation System: Personalized Suggestions using MovieLens Dataset
-#######################################################################################
+######################################################################################
 
 ##############################################################
 # 1. Business Problem
@@ -16,8 +16,8 @@
 #   MovieLens is a film recommendation service that offers personalized movie suggestions to its users.
 #   The dataset contains 2,000,263 ratings for 27,278 distinct films.
 #   The dataset was generated on October 17, 2016, and includes data collected from 138,493 unique users.
-#   The data covers movie preferences from January 9, 1995, to March 31, 2015, providing a comprehensive view of
-#       user preferences during this period.
+#   The data covers movie preferences from January 9, 1995, to March 31, 2015, providing a comprehensive 
+#       view of user preferences during this period.
 #   All users in the dataset were randomly selected.
 #   Each user in the dataset has rated a minimum of 20 films, resulting in a robust representation of
 #       diverse user tastes and interests.
@@ -80,7 +80,8 @@ rare_movies = comment_counts[comment_counts["title"] <= 1000].index
 rare_movies.shape # 24103 movies have less than 1000 ratings
 
 
-# Creating a dataframe that contains the ratings of movies with 1000 or more ratings.
+# Creating a dataframe that contains the ratings of movies with 1000 or more ratings
+####################################################################################
 common_movies = df[~df["title"].isin(rare_movies)]
 common_movies.shape # --> 17766015 ratings
 common_movies["title"].nunique() # --> 3159 movies
@@ -236,14 +237,17 @@ movies_user = movies_user.sort_values(by='timestamp', ascending=False).head(1)
 
 
 # Filtering the 'user_movie_df' dataFrame based on the selected movie title
+############################################################################
 filtered_df = user_movie_df['Grumpier Old Men (1995)']
 
 
 # Finding and ranking the correlation of the selected movie with other movies
+#############################################################################
 corrs = user_movie_df.corrwith(filtered_df).sort_values(ascending=False)
 
 
 # Recommending the first 5 movies (excluding the selected movie itself)
+#######################################################################
 recommendations = corrs[corrs.index != 'Grumpier Old Men (1995)'].\
     sort_values(ascending=False).head(5)
 print(recommendations)
