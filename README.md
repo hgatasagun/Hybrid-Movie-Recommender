@@ -6,3 +6,5 @@ MovieLens is a film recommendation service that offers personalized movie sugges
 
 ## Business Problem
 The business problem is to build a hybrid movie recommender system using item-based and user-based approaches to provide personalized movie recommendations for users. The goal is to enhance the movie-watching experience for them by suggesting relevant films that align with their individual preferences.
+
+For the rating.csv --> hgatasagun@outlook.com
