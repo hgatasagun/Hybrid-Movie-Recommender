@@ -1,3 +1,3 @@
 # Hybrid Movie Recommendation System: Personalized Suggestions using MovieLens Dataset
 
-![Açıklama](https://www.chicageek.com/wp-content/uploads/2016/01/rec.jpg)
+![Açıklama](https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/05/09/15890460739088.jpg)
