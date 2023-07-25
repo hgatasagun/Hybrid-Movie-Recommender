@@ -223,7 +223,7 @@ movies_to_be_recommend.merge(movie[["movieId", "title"]])
 # Recommendations are made based on item similarity.
 
 movie = pd.read_csv('movie.csv')
-rating = pd.read_csv('datasets/rating.csv')
+rating = pd.read_csv('rating.csv')
 movies_to_be_recommend.merge(movie[["movieId", "title"]])
 df = pd.merge(movie, rating, how="left", on="movieId")
 
